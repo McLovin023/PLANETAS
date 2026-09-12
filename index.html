@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- MENU PRINCIPAL -->
+    <img src="" alt="logo">
+    <nav id="menu">
+        <ul>
+            <li>SIMULADOR</li>
+            <li>MECANICA ORBITAL</li>
+            <li>CATALOGO PLANETARIO</li>
+            <li>TELEMETRIA</li>
+        </ul>
+    </nav>
+    <!-- PRIMERA SECCION -->
+   <section>
+    <p>SIMULADOR GRAVITACIONAL HORIZONS-V3 </p>
+    <p>MATRIZ: RELATIVISTA FLUIDA</p>
+    <p>PRECISION JPL: 99.999%</p>
+    <div>
+        <p>ESTADO: SINCRONIZADO</p>
+    </div>
+   </section> 
+   <!-- SEGUNDA SECCION -->
+   <section>
+   <p>CUERPOS CELESTES DEL SISTEMA SOLAR (SELECCION RAPIDA)</p>
+   <p>DESPLAZAMIENTO ORBITAL DISPONIBLE</p> 
+   </section>
+   <!-- TERCERA SECCION -->
+   <section>
+    <ul>
+        <li>Mercurio</li>
+        <li>Venus</li>
+        <li>Tierra</li>
+        <li>La Luna</li>
+        <li>Marte</li>
+        <li>Jupiter</li>
+        <li>Saturno</li>
+        <li>Urano</li>
+        <li>Neptuno</li>
+    </ul>
+   </section>
+    <!-- CUARTA SECCION -->
+   <section>
+    <h2>Configuración</h2>
+    <p>PARAMETROS DE MASA</p>
+    <p>DESTINO GRAVITACIONAL</p>
+    <select name="seleccionar_planeta" id="planeta">
+        <option value="">selecciona un planeta</option>
+        <option value="mercurio">Mercurio</option>
+        <option value="venus">Venus</option>
+        <option value="tierra">Tierra</option>
+        <option value="luna">La Luna</option>
+        <option value="marte">Marte</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturno">Saturno</option>
+        <option value="urano">Urano</option>
+        <option value="neptuno">Neptuno</option>
+    </select>
+    <p>MASA TERRESTRE</p>
+    <p>BASE: TIERRA (1.00 g)</p>
+    <input type="number" id="peso" min="1" max="500" step="0.1" value="70">
+    <!-- botones de peso -->
+     <div>
+        <button type="button" onclick="ponerPeso(50)">50 kg</button>
+        <button type="button" onclick="ponerPeso(60)">60 kg</button>
+        <button type="button" onclick="ponerPeso(70)">70 kg</button>
+        <button type="button" onclick="ponerPeso(80)">80 kg</button>
+        <button type="button" onclick="ponerPeso(100)">100 kg</button>
+     </div>
+    <!-- barra de peso  -->
+
+    <input 
+    type="range" 
+    id="peso" 
+    min="1" 
+    max="200" 
+    value="70"
+    >
+       
+   </section>
+</body>
+</html>
