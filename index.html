@@ -3,85 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>GRAVITYSPACE</title>
 </head>
 <body>
-    <!-- MENU PRINCIPAL -->
-    <img src="" alt="logo">
-    <nav id="menu">
-        <ul>
-            <li>SIMULADOR</li>
-            <li>MECANICA ORBITAL</li>
-            <li>CATALOGO PLANETARIO</li>
-            <li>TELEMETRIA</li>
-        </ul>
-    </nav>
-    <!-- PRIMERA SECCION -->
-   <section>
-    <p>SIMULADOR GRAVITACIONAL HORIZONS-V3 </p>
-    <p>MATRIZ: RELATIVISTA FLUIDA</p>
-    <p>PRECISION JPL: 99.999%</p>
-    <div>
-        <p>ESTADO: SINCRONIZADO</p>
-    </div>
-   </section> 
-   <!-- SEGUNDA SECCION -->
-   <section>
-   <p>CUERPOS CELESTES DEL SISTEMA SOLAR (SELECCION RAPIDA)</p>
-   <p>DESPLAZAMIENTO ORBITAL DISPONIBLE</p> 
-   </section>
-   <!-- TERCERA SECCION -->
-   <section>
-    <ul>
-        <li>Mercurio</li>
-        <li>Venus</li>
-        <li>Tierra</li>
-        <li>La Luna</li>
-        <li>Marte</li>
-        <li>Jupiter</li>
-        <li>Saturno</li>
-        <li>Urano</li>
-        <li>Neptuno</li>
-    </ul>
-   </section>
-    <!-- CUARTA SECCION -->
-   <section>
-    <h2>Configuración</h2>
-    <p>PARAMETROS DE MASA</p>
-    <p>DESTINO GRAVITACIONAL</p>
-    <select name="seleccionar_planeta" id="planeta">
-        <option value="">selecciona un planeta</option>
-        <option value="mercurio">Mercurio</option>
-        <option value="venus">Venus</option>
-        <option value="tierra">Tierra</option>
-        <option value="luna">La Luna</option>
-        <option value="marte">Marte</option>
-        <option value="jupiter">Jupiter</option>
-        <option value="saturno">Saturno</option>
-        <option value="urano">Urano</option>
-        <option value="neptuno">Neptuno</option>
-    </select>
-    <p>MASA TERRESTRE</p>
-    <p>BASE: TIERRA (1.00 g)</p>
-    <input type="number" id="peso" min="1" max="500" step="0.1" value="70">
-    <!-- botones de peso -->
-     <div>
-        <button type="button" onclick="ponerPeso(50)">50 kg</button>
-        <button type="button" onclick="ponerPeso(60)">60 kg</button>
-        <button type="button" onclick="ponerPeso(70)">70 kg</button>
-        <button type="button" onclick="ponerPeso(80)">80 kg</button>
-        <button type="button" onclick="ponerPeso(100)">100 kg</button>
-     </div>
-    <!-- barra de peso  -->
+    <header id="menu">
+        <h1>GravitySpace</h1>
+        <nav>
+            <a href="#">simulador</a>
+            <a href="#">informacion</a>
+            <a href="#">cuerpos celestes</a>
+        </nav>
+    </header>
+    <section id="parrafo1">
+        <h2>BIENVENIDO A GravitySpace</h2>
+        <p>Consulta la gravedad de cada planeta del sistema solar.</p>
+    </section>
+    <main class="contenedor_principal">
+        <section class="seleccionar">
+            <form action="select">
+                <label for="planeta">seleccione planeta</label>
+                <select name="planeta" id="planeta">
+                    <option value="" disabled selected>-- Elija una opción --</option>
+                    <option value="3.70">Mercurio — 3,70 m/s²</option>
+                    <option value="8.87">Venus — 8,87 m/s²</option>
+                    <option value="9.81">Tierra — 9,81 m/s²</option>
+                    <option value="3.71">Marte — 3,71 m/s²</option>
+                    <option value="24.79">Júpiter — 24,79 m/s²</option>
+                    <option value="10.44">Saturno — 10,44 m/s²</option>
+                    <option value="8.69">Urano — 8,69 m/s²</option>
+                    <option value="11.15">Neptuno — 11,15 m/s²</option>
+                </select>
+    
+            <p>
+            <label for="peso">Ingresa tu peso en la Tierra (kg):</label>
+            <input
+                type="number"
+                id="peso"
+                name="peso"
+                placeholder="Ej. 70"
+                min="1"
+                step="any"
+                required
+            >
+            </p>
+            <button id="calcular"  type="button" onclick="calcularpeso()">calcular peso</button>
+             
+            </form>
+        </section>
+        <section class="seleccionar">
+            <h2 id="resultado">tu peso en tierra</h2>
+            <img src="#" alt="imagen planeta">
+            <div id="calculo">
+                <h3>tu peso es equvalente a:</h3>
+                <strong id="igual">kg</strong>
+            </div>
+        </section>
+    </main>
 
-    <input 
-    type="range" 
-    id="peso" 
-    min="1" 
-    max="200" 
-    value="70"
-    >
-       
-   </section>
+    <section class="contenedor_segundario">
+        <div class="informacion">
+            <h3>tamaño:</h3>
+            <p id="tamaño">12.756 km </p>
+        </div>
+        
+        <div class="informacion">
+            <h3>composicion:</h3>
+            <p id="composicion">Roca y metal (corteza de silicatos; núcleo de hierro-níquel). Atmósfera de $78\%$ nitrógeno y $21\%$ oxígeno.</p>
+        </div>
+
+        <div class="informacion"> 
+            <h3>lunas:</h3>
+            <p id="lunas">1 (la luna)</p>
+        </div>
+
+        <div class="informacion">
+            <h3>distancia al sol:</h3>
+            <p id="distancia_sol">$149.6 (millones de km)  (UA)</p>
+        </div>
+
+        <div class="informacion">
+            <h3>periodo de translacion:</h3>
+            <pi id="periodo_translacion">365.25 dias (1 año)</p>
+
+        </div>
+    </section>
 </body>
 </html>

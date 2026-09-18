@@ -1,0 +1,71 @@
+.staatliches-regular {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body{
+   background-image: url(imagenes/photo-1520034475321-cbe63696469a.avif) ;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: azure;
+    font-family: "staatliches-regular", sans-serif;
+}
+#menu a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+}
+
+#parrafo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+
+}
+
+.contenedor_principal{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+
+}
+.seleccionar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid aliceblue;
+    border-radius: 20px;
+    padding: 20px;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+}
+
+.contenedor_segundario{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+    font-family: "staatliches-regular", sans-serif;
+
+}
+.informacion{
+    border: solid aliceblue;
+    border-radius: 20px;
+    padding: 25px;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+
+
+}
