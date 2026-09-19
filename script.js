@@ -19,7 +19,7 @@ const datosPlanetas = {
         composicion: "Roca",
         lunas: "0",
         distancia: "57.9 millones km",
-        modelo: "",
+        modelo: "./imagenes/mercurio_v1.1.glb",
     },
 
     Venus: {
@@ -27,7 +27,7 @@ const datosPlanetas = {
         composicion: "Roca y minerales",
         lunas: "0",
         distancia: "108.2 millones km",
-        modelo: "",
+        modelo: "./imagenes/venus_v1.1.glb",
     },
 
     Marte:{
@@ -35,7 +35,7 @@ const datosPlanetas = {
         composicion: "Roca y minerales",
         lunas: "2",
         distancia: "227.9 millones de km",
-        modelo: "",
+        modelo: "./imagenes/marte_v1.1.glb",
 
     },
 
@@ -44,7 +44,7 @@ const datosPlanetas = {
         composicion: "Roca y minerales",
         lunas: "1",
         distancia: "149.6 millones km",
-        modelo: "./imagenes/tierra.glb",
+        modelo: "./imagenes/tierra_v1.1.glb",
     },
 
      Júpiter: {
@@ -52,7 +52,7 @@ const datosPlanetas = {
         composicion: "Gas",
         lunas: 95,
         distancia: "778.5 millones km",
-        modelo: "",
+        modelo: "./imagenes/jupiter_v1.1.glb",
     },
 
     Saturno: {
@@ -60,7 +60,7 @@ const datosPlanetas = {
         composicion: "Gas",
         lunas: "146",
         distancia: "1.434 millones km",
-        modelo: ""
+        modelo: "/imagenes/saturno_v1.1.glb"
     },
 
     Urano: {
@@ -68,7 +68,7 @@ const datosPlanetas = {
         composicion: "Hielo y gas",
         lunas: "28",
         distancia: "2.871 millones km",
-        modelo: ""
+        modelo: "./imagenes/urano.glb"
     },
 
     Neptuno: {
@@ -76,7 +76,7 @@ const datosPlanetas = {
         composicion: "Hielo y gas",
         lunas: "14",
         distancia: "4.495 millones km",
-        modelo: ""
+        modelo: "./imagenes/neptuno.glb"
   }
 };
 
