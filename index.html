@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <script type="module" src="https://googleapis.com"></script>
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>GRAVITYSPACE</title>
@@ -14,19 +14,19 @@
     <header id="menu">
         <h1>GravitySpace</h1>
         <nav>
-            <a href="index.html">simulador</a>
-            <a href="planetas.html">informacion</a>
-            <a href="planetas.html">cuerpos celestes</a>
+            <a href="index.html"><strong>Simulador</strong></a>
+            <a href="planetas.html"><strong>Informacion</strong></a>
+            <a href="planetas.html"> <strong>Cuerpos celestes</strong></a>
         </nav>
     </header>
     <section id="parrafo1">
-        <h2>BIENVENIDO A GravitySpace</h2>
+        <h2>BIENVENIDO A <span>GravitySpace</span></h2>
         <p>Consulta la gravedad de cada planeta del sistema solar.</p>
     </section>
     <main class="contenedor_principal">
         <section class="seleccionar">
             <form action="select">
-                <label for="planeta">seleccione planeta</label>
+                <label for="planeta">Seleccione planeta</label>
                 <select name="planeta" id="planeta">
                     <option value="" disabled selected>-- Elija una opción --</option>
                     <option value="3.70">Mercurio — 3,70 m/s²</option>
@@ -50,16 +50,14 @@
                 step="any"
                 required
             >
-            </p>
-            <button id="calcular"  type="button" onclick="calcularpeso()">calcular peso</button>
+            </p class="boton">
+            <button id="calcular"  type="button" onclick="calcularpeso()"><strong>Calcular peso</strong></button>
              
             </form>
         </section>
         <section class="seleccionar">
             <h2 id="resultado">Tierra</h2>
-            <model-viewer id="modelo" src="imagenes/Earth_1_12756.glb"></model-viewer>
-                <h3>tu peso es equvalente a:</h3>
-                <strong id="igual">kg</strong>
+            <model-viewer id="modelo" src="imagenes/tierra.glb"></model-viewer>
             </div>
         </section>
     </main>
@@ -67,27 +65,27 @@
     <section class="contenedor_segundario">
         
         <div class="informacion">
-            <h3>tamaño:</h3>
+            <h3>Tamaño:</h3>
             <p id="tamaño">12.756 km </p>
         </div>
         
         <div class="informacion">
-            <h3>composicion:</h3>
+            <h3>Composicion:</h3>
             <p id="composicion">Roca y metal (corteza de silicatos; núcleo de hierro-níquel). Atmósfera de $78\%$ nitrógeno y $21\%$ oxígeno.</p>
         </div>
 
         <div class="informacion"> 
-            <h3>lunas:</h3>
+            <h3>Lunas:</h3>
             <p id="lunas">1 (la luna)</p>
         </div>
 
         <div class="informacion">
-            <h3>distancia al sol:</h3>
+            <h3>Distancia al sol:</h3>
             <p id="distancia_sol">$149.6 (millones de km)  (UA)</p>
         </div>
 
         <div class="informacion">
-            <h3>periodo de translacion:</h3>
+            <h3>Periodo de translacion:</h3>
             <pi id="periodo_translacion">365.25 dias (1 año)</p>
 
         </div>

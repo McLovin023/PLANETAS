@@ -15,12 +15,29 @@ body{
     align-items: center;
     list-style: none;
     color: azure;
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
+    gap: 30px;
+}
+#menu h1{
+    font-size: 55px;
+}
+#menu nav{
+    display: flex;
+    gap: 30px;
 }
 #menu a{
     text-decoration: none;
     color: aliceblue;
-    font-family: "staatliches-regular", sans-serif;
+    font-size: 25px;
+    font-family: 'Staatliches', cursive, sans-serif;   
+    display: inline-block;
+    padding: 4px 8px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+#menu a:hover{
+    transform: translateY(-6px) scale(1.15);
+    color: red;
+    text-shadow: 0 0 12px rgba(160, 200, 255, 0.9);
 }
 
 #parrafo1{
@@ -28,8 +45,19 @@ body{
     flex-direction: column;
     align-items: center;
     color: aliceblue;
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
+    font-size: 50px;
+    margin: 20px;
 
+}
+#parrafo1 h2{
+    margin: 15px;
+}
+#parrafo1 p{
+    margin: 15px;
+}
+#parrafo1 span{
+ color: red;
 }
 
 .contenedor_principal{
@@ -37,8 +65,23 @@ body{
     gap: 15px;
     justify-content: center;
     color: aliceblue;
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
 
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 12px;
+}
+select{
+    padding: 8px 12px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 12px;
 }
 .seleccionar{
     display: flex;
@@ -50,29 +93,30 @@ body{
     border-radius: 20px;
     padding: 20px;
     color: rgb(0, 0, 0);
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
 }
+
 
 .contenedor_segundario{
     display: flex;
     justify-content: center;
     margin-top: 15px;
     gap: 10px;
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
 
 }
 .informacion{
-    border: dashed aliceblue;
+    border: dashed rgb(12, 3, 94);
     border-radius: 20px;
     padding: 25px;
     color: black;
-    font-family: "staatliches-regular", sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
     background-color: aliceblue;
 
 
 }
 #planeta{
-    border: solid rgb(7, 7, 7);
+    border: dashed rgb(7, 7, 7);
     border-radius: 20px;
     
 
@@ -81,7 +125,29 @@ body{
     border: dashed rgb(0, 0, 0);
     border-radius: 20px;
     height: 20px;
-}/* ===== Pagina de informacion de planetas (planetas.html) ===== */
+}
+#calcular{
+    background-color: red;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: aliceblue;
+    border: white;
+    border-radius: 20px;
+    font-family: 'Staatliches', cursive, sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#calcular:hover {
+    background-color: #dc2626;
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+}
+/* ===== Pagina de informacion de planetas (planetas.html) ===== */
 
 .grid-planetas{
     display: grid;
