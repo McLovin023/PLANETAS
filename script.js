@@ -82,7 +82,7 @@ const datosPlanetas = {
 
 const selector = document.getElementById("planeta");
 
-selector.addEventListener("change", funtion() {
+selector.addEventListener("change", function() {
 
     let resultado = selector.option[selector.selectedIndex].text;
     let datos = datosPlanetas[nombre];

@@ -45,10 +45,11 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: solid aliceblue;
+    border: dashed rgb(5, 4, 75);
+    background-color: aliceblue;
     border-radius: 20px;
     padding: 20px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     font-family: "staatliches-regular", sans-serif;
 }
 
@@ -61,21 +62,105 @@ body{
 
 }
 .informacion{
-    border: solid aliceblue;
+    border: dashed aliceblue;
     border-radius: 20px;
     padding: 25px;
-    color: aliceblue;
+    color: black;
     font-family: "staatliches-regular", sans-serif;
+    background-color: aliceblue;
 
 
 }
 #planeta{
-    border: solid aliceblue;
+    border: solid rgb(7, 7, 7);
     border-radius: 20px;
-    height: 20px;
+    
+
 }
 #peso{
-    border: solid aliceblue;
+    border: dashed rgb(0, 0, 0);
     border-radius: 20px;
     height: 20px;
+}/* ===== Pagina de informacion de planetas (planetas.html) ===== */
+
+.grid-planetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
+
+.tarjeta-planeta{
+    display: flex;
+    flex-direction: column;
+    border: dashed rgb(5, 4, 75);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-family: "staatliches-regular", sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-planeta:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(5, 4, 75, 0.6);
+}
+
+.tarjeta-planeta h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    border-bottom: solid rgb(5, 4, 75);
+    padding-bottom: 5px;
+}
+
+.tarjeta-planeta p{
+    margin: 5px 0;
+    font-family: "staatliches-regular", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-planeta span{
+    font-weight: bold;
+    color: rgb(5, 4, 75);
+}
+
+.pie{
+    text-align: center;
+    color: aliceblue;
+    font-family: "staatliches-regular", sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px){
+    #menu{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #menu nav{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor_segundario{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contenedor_principal{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
