@@ -20,6 +20,7 @@ const datosPlanetas = {
         lunas: "0",
         distancia: "57.9 millones km",
         modelo: "./imagenes/mercurio_v1.1.glb",
+        periodo: "88 dias terrestres"
     },
 
     Venus: {
@@ -28,6 +29,7 @@ const datosPlanetas = {
         lunas: "0",
         distancia: "108.2 millones km",
         modelo: "./imagenes/venus_v1.1.glb",
+        periodo: "225 dias terrestres"
     },
 
     Marte:{
@@ -36,6 +38,7 @@ const datosPlanetas = {
         lunas: "2",
         distancia: "227.9 millones de km",
         modelo: "./imagenes/marte_v1.1.glb",
+        periodo: "687 dias terrestres"
 
     },
 
@@ -45,6 +48,7 @@ const datosPlanetas = {
         lunas: "1",
         distancia: "149.6 millones km",
         modelo: "./imagenes/tierra_v1.1.glb",
+        periodo: " 365 dias "
     },
 
      Júpiter: {
@@ -53,6 +57,7 @@ const datosPlanetas = {
         lunas: 95,
         distancia: "778.5 millones km",
         modelo: "./imagenes/jupiter_v1.1.glb",
+        periodo: " 11 - 12 años terrestres"
     },
 
     Saturno: {
@@ -60,7 +65,8 @@ const datosPlanetas = {
         composicion: "Gas",
         lunas: "146",
         distancia: "1.434 millones km",
-        modelo: "/imagenes/saturno_v1.1.glb"
+        modelo: "/imagenes/saturno_v1.1.glb",
+        periodo: "29.5 años terrestres"
     },
 
     Urano: {
@@ -68,7 +74,8 @@ const datosPlanetas = {
         composicion: "Hielo y gas",
         lunas: "28",
         distancia: "2.871 millones km",
-        modelo: "./imagenes/urano.glb"
+        modelo: "./imagenes/urano.glb",
+        periodo: "84 añoss terrestres"
     },
 
     Neptuno: {
@@ -76,21 +83,35 @@ const datosPlanetas = {
         composicion: "Hielo y gas",
         lunas: "14",
         distancia: "4.495 millones km",
-        modelo: "./imagenes/neptuno.glb"
+        modelo: "./imagenes/neptuno.glb",
+        periodo: "165 años terrestres"
   }
 };
 
 const selector = document.getElementById("planeta");
 
-selector.addEventListener("change", function() {
+// selector.addEventListener("change", function() {
 
-    let resultado = selector.option[selector.selectedIndex].text;
-    let datos = datosPlanetas[nombre];
+//     let resultado = selector.options[selector.selectedIndex].text;
+//     let datos = datosPlanetas[nombre];
 
-    document.getElementById("resultado").textContent = nombre;
-    document.getElementById("tamaño").textContent = datos.tamaño;
+//     document.getElementById("resultado").textContent = nombre;
+//     document.getElementById("tamaño").textContent = datos.tamaño;
+//     document.getElementById("composicion").textContent = datos.composicion;
+//     document.getElementById("lunas").textContent = datos.lunas;
+//     document.getElementById("distancia").textContent = datos.distacia;
+//     document.getElementById("modelo").textContent = datos.imagen;
+// });    
+selector.addEventListener("change", function () {
+    const texto = selector.options[selector.selectedIndex].text;
+    const nombre = texto.split("—")[0].trim();
+    const datos = datosPlanetas[nombre];
+
+    document.getElementById("tamaño").textContent =
+        datos.tamaño ?? datos.tamano;
     document.getElementById("composicion").textContent = datos.composicion;
     document.getElementById("lunas").textContent = datos.lunas;
-    document.getElementById("distancia").textContent = datos.distacia;
-    document.getElementById("modelo").textContent = datos.imagen;
-});    
+    document.getElementById("distancia_sol").textContent = datos.distancia;
+    document.getElementById("periodo_translacion").textContent = datos.periodo;
+    document.getElementById("modelo").src = datos.modelo;
+});
