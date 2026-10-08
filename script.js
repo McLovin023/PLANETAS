@@ -51,7 +51,7 @@ const datosPlanetas = {
         periodo: " 365 dias "
     },
 
-     Júpiter: {
+     Jupiter: {
         tamano: "139.820 km",
         composicion: "Gas",
         lunas: 95,
@@ -103,8 +103,7 @@ const selector = document.getElementById("planeta");
 //     document.getElementById("modelo").textContent = datos.imagen;
 // });    
 selector.addEventListener("change", function () {
-    const texto = selector.options[selector.selectedIndex].text;
-    const nombre = texto.split("—")[0].trim();
+    const nombre = selector.options[selector.selectedIndex].dataset.planeta;
     const datos = datosPlanetas[nombre];
 
     document.getElementById("tamaño").textContent =
@@ -115,3 +114,22 @@ selector.addEventListener("change", function () {
     document.getElementById("periodo_translacion").textContent = datos.periodo;
     document.getElementById("modelo").src = datos.modelo;
 });
+
+const botonIdioma = document.getElementById("cambiar-idioma");
+
+if (botonIdioma) {
+    let idioma = "es";
+
+    botonIdioma.addEventListener("click", () => {
+        idioma = idioma === "es"? "en" : "es";
+        
+        document.querySelectorAll("[data-es][data-en]").forEach((elemento)=>
+{
+        elemento.textContent = elemento.dataset[idioma];
+        });
+
+        document.documentElement.lang = idioma;
+        botonIdioma.textContent =idioma === "es" ? "english" : "Español"
+
+    });
+}

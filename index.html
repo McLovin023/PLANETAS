@@ -16,49 +16,51 @@
     <header id="menu">
         <h1>GravitySpace</h1>
         <nav>
-            <a href="index.html"><strong>Simulador</strong></a>
-            <a href="planetas.html"><strong>Informacion</strong></a>
-            <a href="planetas.html"> <strong>Cuerpos celestes</strong></a>
+            <a href="index.html"><strong data-es="Simulador" data-en="Simulator">Simulador</strong></a>
+            <a href="planetas.html"><strong data-es="Información" data-en="Information">Información</strong></a>
+            <a href="planetas.html"><strong data-es="Cuerpos celestes" data-en="Celestial bodies">Cuerpos celestes</strong></a>
+
         </nav>
+        <button id="cambiar-idioma" type="button">English</button>
     </header>
     <section id="parrafo1">
-        <h2>BIENVENIDO A <span>GravitySpace</span></h2>
-        <p>Consulta la gravedad de cada planeta del sistema solar.</p>
+        <h2><span data-es="BIENVENIDO A" data-en="WELCOME TO" style="color: inherit">BIENVENIDO A</span> <span>GravitySpace</span></h2>
+        <p data-es="Consulta la gravedad de cada planeta del sistema solar." data-en="Explore the gravity of every planet in the solar system.">Consulta la gravedad de cada planeta del sistema solar.</p>
     </section>
     <main class="contenedor_principal">
         <section class="seleccionar">
             <form action="select">
-                <label for="planeta">Seleccione planeta</label>
+                <label for="planeta" data-es="Seleccione planeta" data-en="Select a planet">Seleccione planeta</label>
                 <select name="planeta" id="planeta">
-                    <option value="" disabled selected>-- Elija una opción --</option>
-                    <option value="3.70" data-planeta="Mercurio">Mercurio — 3,70 m/s²</option>
-                    <option value="8.87" data-planeta="Venus">Venus — 8,87 m/s²</option>
-                    <option value="9.81" data-planeta="Tierra">Tierra — 9,81 m/s²</option>
-                    <option value="3.71" data-planeta="Marte">Marte — 3,71 m/s²</option>
-                    <option value="24.79" data-planeta="Jupiter">Júpiter — 24,79 m/s²</option>
-                    <option value="10.44" data-planeta="Saturno">Saturno — 10,44 m/s²</option>
-                    <option value="8.69" data-planeta="Urano">Urano — 8,69 m/s²</option>
-                    <option value="11.15" data-planeta="Neptuno">Neptuno — 11,15 m/s²</option>
+                    <option value="" disabled selected data-es="-- Elija una opción --" data-en="-- Choose an option --">-- Elija una opción --</option>
+                    <option value="3.70" data-planeta="Mercurio" data-es="Mercurio — 3,70 m/s²" data-en="Mercury — 3.70 m/s²">Mercurio — 3,70 m/s²</option>
+                    <option value="8.87" data-planeta="Venus" data-es="Venus — 8,87 m/s²" data-en="Venus — 8.87 m/s²">Venus — 8,87 m/s²</option>
+                    <option value="9.81" data-planeta="Tierra" data-es="Tierra — 9,81 m/s²" data-en="Earth — 9.81 m/s²">Tierra — 9,81 m/s²</option>
+                    <option value="3.71" data-planeta="Marte" data-es="Marte — 3,71 m/s²" data-en="Mars — 3.71 m/s²">Marte — 3,71 m/s²</option>
+                    <option value="24.79" data-planeta="Jupiter" data-es="Júpiter — 24,79 m/s²" data-en="Jupiter — 24.79 m/s²">Júpiter — 24,79 m/s²</option>
+                    <option value="10.44" data-planeta="Saturno" data-es="Saturno — 10,44 m/s²" data-en="Saturn — 10.44 m/s²">Saturno — 10,44 m/s²</option>
+                    <option value="8.69" data-planeta="Urano" data-es="Urano — 8,69 m/s²" data-en="Uranus — 8.69 m/s²">Urano — 8,69 m/s²</option>
+                    <option value="11.15" data-planeta="Neptuno" data-es="Neptuno — 11,15 m/s²" data-en="Neptune — 11.15 m/s²">Neptuno — 11,15 m/s²</option>
                 </select>
     
             <p>
-            <label for="peso">Ingresa tu peso en la Tierra (kg):</label>
+            <label for="peso" data-es="Ingresa tu peso en la Tierra (kg):" data-en="Enter your weight on Earth (kg):">Ingresa tu peso en la Tierra (kg):</label>
             <input
                 type="number"
                 id="peso"
                 name="peso"
-                placeholder="Ej. 70"
+                placeholder="Ej. 70" data-placeholder-es="Ej. 70" data-placeholder-en="e.g. 70"
                 min="1"
                 step="any"
                 required
             >
             </p class="boton">
-            <button id="calcular"  type="button" onclick="calcularpeso()"><strong>Calcular peso</strong></button>
+            <button id="calcular" type="button"><strong data-es="Calcular peso" data-en="Calculate weight">Calcular peso</strong></button>
              
             </form>
         </section>
         <section class="seleccionar">
-            <h2 id="resultado">Tierra</h2>
+            <h2 id="resultado" data-es="Tierra" data-en="Earth">Tierra</h2>
             <model-viewer id="modelo"
             src="imagenes/tierra_v1.1.glb" 
             alt="Descripción del modelo 3D" 
@@ -72,27 +74,27 @@
     <section class="contenedor_segundario">
         
         <div class="informacion">
-            <h3>Tamaño:</h3>
+            <h3 data-es="Tamaño:" data-en="Size:">Tamaño:</h3>
             <p id="tamaño">12.756 km </p>
         </div>
         
         <div class="informacion">
-            <h3>Composicion:</h3>
-            <p id="composicion">Roca y metal (corteza de silicatos; núcleo de hierro-níquel). Atmósfera de $78\%$ nitrógeno y $21\%$ oxígeno.</p>
+            <h3 data-es="Composición:" data-en="Composition:">Composición:</h3>
+            <p id="composicion" data-es="Roca y metal (corteza de silicatos; núcleo de hierro-níquel). Atmósfera de 78% nitrógeno y 21% oxígeno." data-en="Rock and metal (silicate crust; iron-nickel core). Atmosphere of 78% nitrogen and 21% oxygen.">Roca y metal (corteza de silicatos; núcleo de hierro-níquel). Atmósfera de $78\%$ nitrógeno y $21\%$ oxígeno.</p>
         </div>
 
         <div class="informacion"> 
-            <h3>Lunas:</h3>
+            <h3 data-es="Lunas:" data-en="Moons:">Lunas:</h3>
             <p id="lunas">1 (la luna)</p>
         </div>
 
         <div class="informacion">
-            <h3>Distancia al sol:</h3>
+            <h3 data-es="Distancia al Sol:" data-en="Distance from the Sun:">Distancia al sol:</h3>
             <p id="distancia_sol">$149.6 (millones de km)  (UA)</p>
         </div>
 
         <div class="informacion">
-            <h3>Periodo de translacion:</h3>
+            <h3 data-es="Período de traslación:" data-en="Orbital period:">Periodo de translacion:</h3>
             <p id="periodo_translacion">365.25 dias (1 año)</p>
 
         </div>
