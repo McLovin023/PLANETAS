@@ -1,6 +1,6 @@
 const boton = document.getElementById("calcular");
 
-boton.addEventListener("click", function() {
+ if (boton) boton.addEventListener("click", function() {
     let peso = document.getElementById ("peso") .value;
     let gravedad = document.getElementById("planeta") .value;
 
@@ -102,7 +102,7 @@ const selector = document.getElementById("planeta");
 //     document.getElementById("distancia").textContent = datos.distacia;
 //     document.getElementById("modelo").textContent = datos.imagen;
 // });    
-selector.addEventListener("change", function () {
+ if (selector) selector.addEventListener("change", function () {
     const nombre = selector.options[selector.selectedIndex].dataset.planeta;
     const datos = datosPlanetas[nombre];
 
@@ -120,6 +120,8 @@ const botonIdioma = document.getElementById("cambiar-idioma");
 if (botonIdioma) {
     let idioma = "es";
 
+    const textoBotonIdioma = botonIdioma.querySelector("#texto-idioma");
+
     botonIdioma.addEventListener("click", () => {
         idioma = idioma === "es"? "en" : "es";
         
@@ -129,7 +131,6 @@ if (botonIdioma) {
         });
 
         document.documentElement.lang = idioma;
-        botonIdioma.textContent =idioma === "es" ? "english" : "Español"
-
+        textoBotonIdioma.textContent = idioma === "es" ? "English" : "Español";
     });
 }
